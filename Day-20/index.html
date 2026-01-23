@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Day-20</title>
+</head>
+
+<body>
+
+    <img src="https://cdn.pixabay.com/photo/2018/08/04/11/30/draw-3583548_1280.png" alt="">
+
+    <button onclick="showImage()">Show</button>
+    <button onclick="hideImage()">Hide</button>
+
+    <script>
+        let image = document.querySelector("img")
+
+        function showImage() {
+            image.style.display = "block"
+            image.style.cssText = `width : 100%; height : 100vh;`
+        }
+
+        function hideImage() {
+            image.style.display = "none"
+        }
+    </script>
+</body>
+
+</html>
