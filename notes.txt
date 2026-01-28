@@ -1,4 +1,4 @@
-Tuesday(18/11/2025)
+ Tuesday(18/11/2025)
 
 Identifier
 --------------
@@ -1269,3 +1269,72 @@ Event Listener :-
 	3. Input Event :- onfocus, onblur, onchange, onselect
 	4. Keyboard Event :- onkeyup, onkeydown, onkeypress
 	5. Form Event :- onsubmit
+
+setTieout() :-
+----------------
+- setTimeout is a method in js which take two argument one is callback function and second one is time in millisecond. It makes our JS code in asynchronous it is used to call function after some time.
+
+clearTimeOut() :-
+------------------
+- clear timeout is method which accept one argument where the argument is the reference of the setTimeOut.
+
+setInterval() :- 
+------------------
+- It is function which accept two argument one is callback function which is executed after every span of time, secon argument is time in millisecond.
+
+clearInterval() :-
+-------------------
+- It is method which is used to clear the set Interval it accept one argument where the argument is the reference of the set Interval.
+
+fetch() :-
+-----------
+- It is a method which is used for fetching the data from the api or server or backend and it returns one promise.
+
+Promise :- 
+-------------
+- It is the object which tells the eventual completion or failure of a asynchronous task.
+- It returns one another promise.
+
+There are three state of promises :-
+-------------------------------------
+	1. Pending
+	2. Resolve
+	3. Rejected
+
+Promises instances method :- 
+-----------------------------
+	1. .then :-
+	------------
+	- It is executed when the promises successfully resolve.
+
+	2. .catch :-
+	------------
+	- It is executed when the promise is rejected.
+
+	3. .finally :-
+	--------------
+	- It is executed in both cases either the promise will resolve or either promise will rejected.
+
+Promise Static Method :-
+========================
+
+	1. Promise.all() :- 
+	===================
+	- It takes an array of multiple promises as input and returns a single promise. It resolve when all the promises in the array has resolved and rejected when anyone of the promise inside the array get rejected.
+	- It waits for all the promises in the array to reduce and then returns an array of their result.
+	- When we are using if anyone of the promise in the array is get rejected then the entire promise will be rejected.
+	
+	2. Promise.allSetteled() :-
+	=============================	
+	- This method is similar to Promise.All but it wait for all the promise to setteled down (either resolve or rejected) and returns an array of object with the status of each promise.
+	- It is used when want to ensure that all the promises are completed and we want the result of the each promise wheather it is succeed or rejected.
+
+	3. Promise.any() :-
+	===================
+	- It takes and return a single promise which is resolved as soon as anyone of the promise is fullfilled.
+	- If all the promise are rejected then it returns the whole promise as rejected with an aggregate error which contains all the rejected reason.
+
+	4. Promise.race() :-
+	====================
+	- This mehtod takes an array of promise as input and returns a single promise it will return the promise as soon as anyone of the promise is either resolve or rejected.
+

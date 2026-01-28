@@ -8,30 +8,40 @@
 
     <style>
         .display {
-            display: none;
+            visibility: hidden;
         }
     </style>
 </head>
 
 <body onmousemove="mouseMove()">
 
-    <img class="display" src="https://cdn.pixabay.com/photo/2018/08/04/11/30/draw-3583548_1280.png" alt="">
+    <img class="display"
+        src="https://cdn.pixabay.com/photo/2018/08/04/11/30/draw-3583548_1280.png"
+        alt="Image" width="300">
 
-    <button onclick = "showImage()">Show</button>
+    <br><br>
+
+    <button onclick="showImage()">Show</button>
 
     <script>
-        let image = document.querySelector("img")
-        let i = 0
-        
+        let image = document.querySelector("img");
+        let btn = document.querySelector("button");
+        let i = 0;
+
         function showImage() {
-            image.classList.toggle('display')
+            image.classList.toggle("display");
+
+            if (btn.textContent === "Show") {
+                btn.innerText = "Hide";
+            } else {
+                btn.innerText = "Show";
+            }
         }
 
         function mouseMove() {
-            console.log(i++)
+            console.log(i++);
         }
-
     </script>
-</body>
 
+</body>
 </html>
